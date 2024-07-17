@@ -1,0 +1,30 @@
+<section class="container">
+    <p-card>
+        <div class="search">
+            <p>Puedes buscar por nombre de usuario en la API de GIT</p>
+        </div>
+        <form [formGroup]="searchForm" *ngIf="searchForm">
+            <div class="search">
+                <div>
+                    <input type="text" class="input-search" pInputText formControlName="search"/>
+                    <div *ngIf="searchForm.get('search')?.errors?.['minlength']">
+                       <small class="error-label">La palabra debe tener al menos 4 caracteres. </small>
+                    </div>
+                    <div *ngIf="searchForm.get('search')?.hasError('nameError') && searchForm.get('search')?.touched">
+                       <small class="error-label">La palabra no puede ser 'gcsglobal'. </small> 
+                    </div>
+                </div>
+                <p-button label="Buscar" (click)="getUsers()" [disabled]="searchForm.invalid"></p-button>
+            </div>
+        </form>
+    </p-card>
+</section>
+
+<section *ngIf="listUsers">
+    <app-card [listUserSearch]="listUsers"></app-card>
+    <app-graphic *ngIf="graphic" [followers]="dataGraphic" [names]="onlyNames"></app-graphic>
+</section>
+
+
+<p-toast></p-toast>
+<app-loading *ngIf="loading"></app-loading>

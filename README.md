@@ -2,26 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
-## Development server
+## Informacion del participante
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Andrey Hernandez Gil
+Direccion: Risaralda - Dosquebradas, Frailes comuneros casa 106 c piso 2
+Correo: Andreyh190@gmail.com
 
-## Code scaffolding
+## Informacion del proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Se realizo la prueba cumpliendo con todos los requerimientos, principalmente la idea era poder tener todos los puntos solicitados en su totalidad, incluyendo tanto los componentes como sus pruebas, depues de lograr este punto se organizarton estilos para las vistas para que se viera un poco mejor y fuera facil de entender para el examinador.
 
-## Build
+En el Guard se puso la restinccion de un score menor a 1, ya que todos los usuarios que consulte de la API tenian score de 1, y si ponia la restinccion en 30 como dice le requerimiento no se veria la vista de detalle con ningun usuario y creo que no seria lo idea, ya que esta parte incluye varios requerimientos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Tambien se agrego la grafica en la vista donde estan las tarjetas con los usuarios para que fuera mas entendible para el usuario.
 
-## Running unit tests
+El cuadro de texto para buscar a los usuarios acepta tanto texto como numeros ya que muchos de los usuarios de API suelen tener numeros en su nombre o ser solo numeros en algunas ocaciones .
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Comandos para correr el proyecto y pruebas unitarias
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Con el comando ng serve se puede correr el proyecto local mente
+Con el comando ng test --watch puedes validar que las pruebas funcionan.

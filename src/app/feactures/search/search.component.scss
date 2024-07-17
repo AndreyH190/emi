@@ -1,0 +1,18 @@
+.card {
+    margin-top: 3rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+    
+    .input-search {
+        margin-right: 1.5rem;
+    }
+
+    .error-label {
+        color: rgb(254, 65, 65);
+    }
+}

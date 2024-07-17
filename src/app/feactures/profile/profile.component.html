@@ -1,0 +1,23 @@
+<section class="container">
+    <p-card *ngIf="infoUser">
+        <div class="title-profile">
+            <p>información del usuario</p>
+        </div>
+        <div class="porfile">
+            <img class="imgUser" [src]="infoUser.avatar_url" alt="foto del perfil del usuario buscado">
+            <div>
+                <ul>
+                    <li><strong>Nombre</strong> {{infoUser.name}}</li>
+                    <li><strong>Compañia</strong> {{infoUser.company}}</li>
+                    <li><strong>Dirección</strong> {{infoUser.location}}</li>
+                    <li><strong>Repositorios</strong> {{infoUser.public_repos}}</li>
+                    <li><strong>Seguidores</strong> {{infoUser.followers}}</li>
+                    <li><strong>Seguiendo</strong> {{infoUser.following}}</li>
+                </ul>
+            </div>
+        </div>
+    </p-card>
+</section>
+
+<p-toast></p-toast>
+<app-loading *ngIf="loading"></app-loading>

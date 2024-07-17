@@ -1,0 +1,15 @@
+.title-profile {
+    display: flex;
+    justify-content: center;
+}
+
+.porfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .imgUser {
+        width: 200px;
+        border-radius: 20px;
+    }
+}

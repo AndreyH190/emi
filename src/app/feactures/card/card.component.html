@@ -1,0 +1,17 @@
+<section class="container">
+    <h4>Estos son los 10 primeros usuarios encontrados con ese nombre</h4>
+    <div  class="grid-card" >
+        <p-card *ngFor="let item of listUserSearch" class="card">
+            <ng-template pTemplate="header">
+                <img alt="Card" [src]='item.avatar_url' />
+            </ng-template>
+            <p>Nombre de usuario <strong>{{item.login}} </strong> </p>
+            <p>ID de usuario <strong>{{item.id}} </strong> </p>
+            <ng-template pTemplate="footer">
+                <a (click)="redirectProfile(item)">
+                    <p-button label="Detalle" icon="pi pi-check"></p-button>
+                </a>
+            </ng-template>
+        </p-card>
+    </div>
+</section>
